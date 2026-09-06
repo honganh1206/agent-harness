@@ -1,0 +1,8 @@
+{
+  "packages": [
+    "./pi-packages/pi-mcp-adapter",
+    "./pi-packages/rpiv-mono/packages/rpiv-ask-user-question",
+    "./pi-packages/rpiv-mono/packages/rpiv-todo",
+    "./pi-packages/context-mode"
+  ]
+}

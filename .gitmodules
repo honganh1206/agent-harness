@@ -1,0 +1,9 @@
+[submodule "pi-packages/pi-mcp-adapter"]
+	path = pi/pi-packages/pi-mcp-adapter
+	url = https://github.com/nicobailon/pi-mcp-adapter.git
+[submodule "pi-packages/rpiv-mono"]
+	path = pi/pi-packages/rpiv-mono
+	url = https://github.com/juicesharp/rpiv-mono.git
+[submodule "pi-packages/context-mode"]
+	path = pi/pi-packages/context-mode
+	url = https://github.com/mksglu/context-mode.git

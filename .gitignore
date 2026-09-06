@@ -1,0 +1,7 @@
+# Runtime/dependency data for the dev-browser skill.
+skills/dev-browser/node_modules/
+skills/dev-browser/profiles/
+skills/dev-browser/tmp/
+
+# Extension dependencies are restored from committed lockfiles.
+pi/agent/extensions/*/node_modules/

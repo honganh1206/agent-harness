@@ -1,12 +1,9 @@
 #!/bin/bash
+set -euo pipefail
 
-# Get the directory where this script is located
-SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
-
-# Change to the script directory
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 cd "$SCRIPT_DIR"
 
-# Parse command line arguments
 HEADLESS=false
 while [[ "$#" -gt 0 ]]; do
     case $1 in
@@ -16,9 +13,11 @@ while [[ "$#" -gt 0 ]]; do
     shift
 done
 
-echo "Installing dependencies..."
-npm install
+if [[ ! -x node_modules/.bin/tsx ]]; then
+    echo "Installing dependencies..."
+    npm ci
+fi
 
 echo "Starting dev-browser server..."
-export HEADLESS=$HEADLESS
-npx tsx scripts/start-server.ts
+export HEADLESS
+npm exec -- tsx scripts/start-server.ts
