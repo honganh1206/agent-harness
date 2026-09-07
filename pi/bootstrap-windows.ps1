@@ -94,7 +94,6 @@ if (-not $SkipDependencies) {
     Assert-Command -Name 'npm' -Purpose 'install Pi package dependencies'
     Assert-Command -Name 'bun' -Purpose 'install context-mode dependencies'
 
-    Invoke-External -File 'npm' -Arguments @('ci', '--prefix', (Join-Path $extensionSource 'sandbox'))
     Invoke-External -File 'npm' -Arguments @('ci', '--prefix', (Join-Path $packageRoot 'pi-mcp-adapter'))
     Invoke-External -File 'npm' -Arguments @('ci', '--prefix', (Join-Path $packageRoot 'rpiv-mono'))
     Invoke-External -File 'bun' -Arguments @('install', '--cwd', (Join-Path $packageRoot 'context-mode'), '--frozen-lockfile')

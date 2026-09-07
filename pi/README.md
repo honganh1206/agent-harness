@@ -29,9 +29,9 @@ The script creates these global Pi paths:
 
 It writes absolute paths for the local Pi packages.
 It creates junctions for extensions and skills.
-It installs package dependencies, including the sandbox extension runtime, unless you specify `-SkipDependencies`.
+It installs package dependencies unless you specify `-SkipDependencies`.
 
-The sandbox extension is version-controlled at `pi/agent/extensions/sandbox`. The global Pi extensions path is linked to `pi/agent/extensions`, so Pi auto-discovers it. On Linux, the sandbox also requires `bubblewrap`, `socat`, and `ripgrep`.
+The global Pi extensions path is linked to `pi/agent/extensions`, so Pi auto-discovers the version-controlled extensions.
 
 Use `-SkipDependencies` only when the package dependencies already exist.
 

@@ -52,7 +52,6 @@ if [ "$skip_dependencies" = false ]; then
     command -v npm >/dev/null 2>&1 || { printf 'npm is required\n' >&2; exit 1; }
     command -v bun >/dev/null 2>&1 || { printf 'bun is required\n' >&2; exit 1; }
     npm ci --prefix "$repo_root/skills/dev-browser"
-    npm ci --prefix "$repo_root/pi/agent/extensions/sandbox"
     npm ci --prefix "$repo_root/pi/pi-packages/pi-mcp-adapter"
     npm ci --prefix "$repo_root/pi/pi-packages/rpiv-mono"
     (cd "$repo_root/pi/pi-packages/context-mode" && bun install --frozen-lockfile)
